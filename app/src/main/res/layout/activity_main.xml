@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:textSize="50dp"
+        android:id="@+id/txtview"
+        android:text="SomeText"/>
+
+
+    <fragment
+    android:id="@+id/chifri_fragment"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/txtview"
+    android:name="com.example.nds.calc.Chifri_Fragment"
+    tools:layout="@layout/chifri_fragment" />
+    <fragment
+        android:id="@+id/deystviya_fragment"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/chifri_fragment"
+        android:layout_below="@id/txtview"
+        android:name="com.example.nds.calc.Deystviya_Fragment"
+        tools:layout="@layout/deystviya_fragment" />
+
+</RelativeLayout>
